@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>secre-message-app</title>
+</head>
+<body>
+    <div class="message__div">
+        <textarea name="message" id="message__inputField" cols="30" rows="10" placeholder="write your secrete message"></textarea>
+        <button class="message__encrypt__button">Encrypt!</button>
+    </div>
+
+    <div class="encrypted__message__div">
+        <p>copy the link below and send to the recipient</p>
+        <input type="text" class="encrypted__message__link"><i class="fas fa-copy"></i>
+    </div>
+
+    <div class="reveal__message__div">
+        <p class="the__message"></p>
+        <a href="./index.html" class="link__to__home">Create your own secrete messages</a>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

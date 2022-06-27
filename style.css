@@ -1,0 +1,147 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    font-size: 16px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.message__div{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
+
+#message__inputField{
+    width: 80%;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    padding: .5em .5em;
+    border: 3px solid brown;
+    border-radius: 5px;
+    font-size: 1.2rem;
+}
+
+.message__encrypt__button{
+    width: 150px;
+    height: 35px;
+    border: none;
+    font-weight: 700;
+    border-radius: 5px;
+    margin-bottom: 3em;
+    background: linear-gradient(to right, rgb(247, 102, 102), white, rgb(224, 87, 87));
+    transition: all 500ms ease-in;
+}
+
+.message__encrypt__button:hover{
+    color: white;
+    background: black;
+}
+
+.encrypted__message__div{
+    box-shadow: 0 0 5px 1px black;
+    position: relative;
+    margin-top: 25vh;
+    width: 80%;
+    margin-bottom: 2em;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encrypted__message__div p{
+    margin-top: .5em;
+    color: rgb(92, 90, 90);
+    margin-bottom: .5em;
+}
+
+.encrypted__message__div input{
+    width: 90%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid brown;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    margin-bottom: .5em;
+    outline: none;
+}
+
+.encrypted__message__div i{
+    font-size: 1.5rem;
+    color: brown;
+    position: absolute;
+    right: 0;
+    top: 35px;
+    margin-left: 1em;
+    margin-right: .2em;
+}
+
+.reveal__message__div{
+    display: none;
+    position: relative;
+    margin-top: 25vh;
+    min-height: 20vh;
+    width: 80%;
+    padding: .5em .5em;
+    box-shadow: 0 0 5px 1px black;
+}
+
+.the__message{
+    font-size: 1.2rem;
+    margin-bottom: 1em;
+}
+
+.link__to__home{
+    margin-top: 1em;
+    position: absolute;
+    bottom: .5em;
+}
+
+.hide{
+    display: none;
+}
+
+@media screen and (max-width: 600px){
+    .message__div{
+        width: 100%;
+    }
+
+    .encrypted__message__div{
+        width: 95%;
+        align-items: flex-start;
+        padding-left: .2em;
+    }
+
+    .encrypted__message__div p{
+        width: 100%;
+        text-align: center;
+    }
+
+    .encrypted__message__div p{
+        text-align: center;
+    }
+
+    .encrypted__message__div input{
+        width: 80;
+        overflow-x: scroll;
+    }
+
+    .reveal__message__div{
+        width: 100%;
+    }
+
+    .reveal__message__div{
+        width: 90%;
+    }
+}
