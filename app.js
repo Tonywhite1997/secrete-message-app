@@ -12,7 +12,6 @@ encryptButton.addEventListener("click", ()=>{
     if(!messageField.value || messageField.value[0] === " "){
         return
     }
-    console.log(encryptedMessage[0]);
     const encryptedLink = `${window.location}#${encryptedMessage}`
     encryptedMessageLink.value = encryptedLink
     messageDiv.classList.add("hide")
@@ -20,12 +19,17 @@ encryptButton.addEventListener("click", ()=>{
 
 })
 
-copyButton.addEventListener("click", ()=>{
-    encryptedMessageLink.select()
-    encryptedMessageLink.setSelectionRange(0,99999)
-    navigator.clipboard.writeText(encryptedMessageLink.value)
-    alert("link copied to clipboard")
-})
+async function copyTextToClipboard(){
+    try{
+        await navigator.clipboard.writeText(encryptedMessageLink.value)
+        alert("link copied to clipboard")
+    }
+    catch(err){
+        throw err
+    }
+}
+
+copyButton.addEventListener("click", copyTextToClipboard)
 
 if(window.location.hash !== ""){
     let hash = window.location.hash
